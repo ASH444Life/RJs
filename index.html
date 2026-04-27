@@ -1,48 +1,231 @@
-<section id="reviews">
-  <div class="reviews-inner">
+<!DOCTYPE html>
 
-    <div class="reviews-header">
-      <span class="section-label">What People Are Saying</span>
-      <h2 class="section-title">Customer <em>Reviews</em></h2>
-      <div class="rule"></div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RJ's Reviews</title>
 
-      <div class="rating-sum">
-        <div class="verified-label">Verified Local Reviews</div>
-        <div class="big-rating">4.3★</div>
-        <div class="rating-src">Google Rating</div>
-      </div>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --amber: #D4841A;
+      --amber-lt: #F0A832;
+      --cream: #F5EDD8;
+      --charcoal: #1A1812;
+      --dark: #0E0D0A;
+      --mid: #2A2620;
+      --smoke: #5C5448;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--dark);
+      color: var(--cream);
+      font-family: 'Lora', serif;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background: rgba(14,13,10,.98);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      color: var(--amber-lt);
+      font-size: 2rem;
+      letter-spacing: .12em;
+      text-decoration: none;
+    }
+
+    .reviews {
+      padding: 10rem 2rem 6rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: 'Bebas Neue', sans-serif;
+      color: var(--amber);
+      letter-spacing: .5em;
+      font-size: .8rem;
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      font-size: 3rem;
+      margin-top: .5rem;
+    }
+
+    .section-title em {
+      color: var(--amber-lt);
+      font-style: italic;
+    }
+
+    .rule {
+      width: 60px;
+      height: 2px;
+      background: var(--amber);
+      margin: 1.5rem auto 3rem;
+    }
+
+    .rating {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .big {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 5rem;
+      color: var(--amber-lt);
+    }
+
+    .stars {
+      color: var(--amber);
+      font-size: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(212,132,26,.15);
+    }
+
+    .card {
+      background: var(--charcoal);
+      padding: 2rem;
+    }
+
+    .quote {
+      font-size: 3rem;
+      color: var(--amber);
+      opacity: .4;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .text {
+      font-style: italic;
+      color: rgba(245,237,216,.75);
+      line-height: 1.8;
+      font-size: .95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      background: var(--amber);
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    .name {
+      font-size: .85rem;
+    }
+
+    .source {
+      font-size: .7rem;
+      color: var(--smoke);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    @media(max-width:900px){
+      .grid { grid-template-columns: 1fr; }
+      nav { padding: 1rem; }
+    }
+  </style>
+
+</head>
+
+<body>
+
+<nav>
+  <a class="logo" href="#">RJ's</a>
+</nav>
+
+<section class="reviews">
+
+<span class="section-label">What People Say</span>
+
+  <h1 class="section-title">Customer <em>Reviews</em></h1>
+  <div class="rule"></div>
+
+  <div class="rating">
+    <div class="big">5.0</div>
+    <div class="stars">★★★★★</div>
+  </div>
+
+  <div class="grid">
+
+```
+<div class="card">
+  <div class="quote">"</div>
+  <p class="text">Not a fancy place, but the food hits hard. Burgers were fresh, cooked perfect, and the service stayed on point the whole time.</p>
+  <div class="author">
+    <div class="avatar">SC</div>
+    <div>
+      <div class="stars">★★★★★</div>
+      <div class="name">Stu C.</div>
+      <div class="source">TripAdvisor</div>
     </div>
+  </div>
+</div>
 
-    <div class="reviews-slider">
-      <div class="review-track" id="reviewTrack">
-
-        <div class="rv-card">
-          <p class="rv-text">Not a fancy place, but if you want good food and great service, stop in. Burgers were some of the best we’ve had. Fresh, cooked perfectly. Bartender was friendly and on point.</p>
-          <span class="rv-name">Google Reviewer</span>
-        </div>
-
-        <div class="rv-card">
-          <p class="rv-text">Swiss Mushroom Burger was huge and packed with flavor. One of the best burgers in the area. Fries were solid too.</p>
-          <span class="rv-name">Local Customer</span>
-        </div>
-
-        <div class="rv-card">
-          <p class="rv-text">Classic dive bar feel. Cold beer, good wings, great game-day atmosphere. Exactly what you want from a sports bar.</p>
-          <span class="rv-name">Regular</span>
-        </div>
-
-        <div class="rv-card">
-          <p class="rv-text">Olive burger is legendary. If you know, you know. Staff always treats you right.</p>
-          <span class="rv-name">Google Reviewer</span>
-        </div>
-
-        <div class="rv-card">
-          <p class="rv-text">Back patio is a vibe. Food comes out fast and hot. Never had a bad experience here.</p>
-          <span class="rv-name">Local Guest</span>
-        </div>
-
-      </div>
+<div class="card">
+  <div class="quote">"</div>
+  <p class="text">Swiss mushroom burger was massive and juicy. Fries were solid. Patio vibe was calm and chill.</p>
+  <div class="author">
+    <div class="avatar">KV</div>
+    <div>
+      <div class="stars">★★★★★</div>
+      <div class="name">Kalamazoo Visitor</div>
+      <div class="source">Reviews</div>
     </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="quote">"</div>
+  <p class="text">Place feels alive when games are on. Food is consistent and the service stays friendly even when it is packed.</p>
+  <div class="author">
+    <div class="avatar">RJ</div>
+    <div>
+      <div class="stars">★★★★★</div>
+      <div class="name">Regular</div>
+      <div class="source">Google</div>
+    </div>
+  </div>
+</div>
+```
 
   </div>
+
 </section>
+
+</body>
+</html>

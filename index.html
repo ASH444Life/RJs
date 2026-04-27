@@ -1,15 +1,109 @@
-<div class="gallery">
-    <div class="gfill" style="background-image: url('data:image/png;base64,PHOTO1_BASE64');"></div>
-    <div class="gfill" style="background-image: url('data:image/png;base64,PHOTO2_BASE64');"></div>
-    <div class="gfill" style="background-image: url('data:image/png;base64,PHOTO3_BASE64');"></div>
-    <div class="gfill" style="background-image: url('data:image/png;base64,PHOTO1_BASE64');"></div>
-    <div class="gfill" style="background-image: url('data:image/png;base64,PHOTO2_BASE64');"></div>
-    <div class="gfill" style="background-image: url('data:image/png;base64,PHOTO3_BASE64');"></div>
-</div>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RJ's Sports Bar & Grill</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
-.gfill {
-    background-size: cover;
-    background-position: center;
-}
-</style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #1b1b1b;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gfill {
+      height: 280px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+
+    .gfill:hover {
+      transform: scale(1.03);
+    }
+
+    .info {
+      text-align: center;
+      padding: 30px 20px;
+      background: #1a1a1a;
+    }
+
+    .info h2 {
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      margin: 5px 0;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>RJ's Sports Bar & Grill</h1>
+  <p>Portage, Michigan</p>
+</header>
+
+<section class="gallery">
+  <div class="gfill" style="background-image: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b');"></div>
+  <div class="gfill" style="background-image: url('https://images.unsplash.com/photo-1541544741938-0af808871cc0');"></div>
+  <div class="gfill" style="background-image: url('https://images.unsplash.com/photo-1561758033-d89a9ad46330');"></div>
+  <div class="gfill" style="background-image: url('https://images.unsplash.com/photo-1552566626-52f8b828add9');"></div>
+  <div class="gfill" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4');"></div>
+  <div class="gfill" style="background-image: url('https://images.unsplash.com/photo-1579027989536-b7b1f875659b');"></div>
+</section>
+
+<section class="info">
+  <h2>Visit Us</h2>
+  <p>8118 Portage Rd, Portage, MI 49002</p>
+  <p>Phone: (269) 323-9262</p>
+  <p>Local sports bar, burgers, drinks, pool hall atmosphere.</p>
+</section>
+
+<footer>
+  © 2026 RJ's Sports Bar & Grill
+</footer>
+
+</body>
+</html>
+```

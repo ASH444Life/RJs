@@ -4,17 +4,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>RJ's Sports Bar & Grill - Portage, MI</title>
-<meta name="description" content="RJ's Sports Bar & Grill in Portage, Michigan. Burgers, wings, cold beer, and game day atmosphere. Call (269) 323-9262 or visit 8118 Portage Rd." />
+<meta name="description" content="RJ's Sports Bar & Grill in Portage, Michigan. Burgers, wings, cold beer, and game night energy at 8118 Portage Rd." />
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Bebas+Neue&family=Lora:wght@400;600&display=swap" rel="stylesheet" />
 
 <style>
 :root{
-  --bg:#0e0d0a;
-  --card:#1a1812;
+  --bg:#0b0a08;
+  --card:#17150f;
   --gold:#d4841a;
   --text:#f5edd8;
-  --muted:#a89f90;
+  --muted:#a79d8f;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Lora,serif;background:var(--bg);color:var(--text)}
@@ -23,75 +23,79 @@ a{text-decoration:none;color:inherit}
 header{
 position:fixed;top:0;left:0;right:0;
 display:flex;justify-content:space-between;align-items:center;
-padding:14px 20px;
-background:rgba(14,13,10,.9);
-backdrop-filter:blur(10px);
+padding:14px 18px;
+background:rgba(10,9,7,.92);
 z-index:1000;
 }
-.logo{font-family:"Bebas Neue";font-size:24px;color:var(--gold);letter-spacing:2px}
-.nav a{margin-left:18px;font-size:12px;text-transform:uppercase;color:var(--muted)}
+.logo{font-family:"Bebas Neue";font-size:22px;color:var(--gold);letter-spacing:2px}
+.nav a{margin-left:16px;font-size:11px;text-transform:uppercase;color:var(--muted)}
 .nav a:hover{color:var(--gold)}
 
 .hero{
 min-height:100vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:0 20px;
 position:relative;
+padding:0 20px;
 overflow:hidden;
 }
 .hero img{
 position:absolute;
+inset:0;
 width:100%;
 height:100%;
 object-fit:cover;
 opacity:.35;
-z-index:0;
 }
-.hero-content{position:relative;z-index:1}
+.hero:after{
+content:"";
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(212,132,26,.18), transparent 60%);
+}
+.hero-content{position:relative;z-index:2}
 .hero h1{
 font-family:"Playfair Display";
-font-size:clamp(40px,8vw,90px);
+font-size:clamp(42px,8vw,92px);
 line-height:1;
 }
 .hero span{color:var(--gold)}
-.hero p{margin-top:12px;color:var(--muted)}
-.cta{margin-top:25px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.hero p{margin-top:10px;color:var(--muted)}
+.cta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
 .btn{
-padding:12px 18px;
+padding:11px 16px;
 border:1px solid var(--gold);
-font-size:12px;
+font-size:11px;
 text-transform:uppercase;
 letter-spacing:1px;
 }
 .btn.primary{background:var(--gold);color:#000}
 
-section{padding:80px 20px;max-width:1100px;margin:auto}
-.title{font-family:"Playfair Display";font-size:34px;margin-bottom:10px}
-.sub{color:var(--muted);margin-bottom:30px}
+section{padding:70px 18px;max-width:1050px;margin:auto}
+.title{font-family:"Playfair Display";font-size:30px;margin-bottom:10px}
+.sub{color:var(--muted);margin-bottom:25px}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
-.card{background:var(--card);padding:20px;border:1px solid rgba(212,132,26,.15)}
-.card img{width:100%;height:160px;object-fit:cover;margin-bottom:12px}
-.card h3{margin-bottom:8px}
-.card p{color:var(--muted);font-size:14px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:var(--card);padding:16px;border:1px solid rgba(212,132,26,.12)}
+.card img{width:100%;height:150px;object-fit:cover;margin-bottom:10px}
+.card h3{margin-bottom:6px}
+.card p{color:var(--muted);font-size:13px;line-height:1.5}
 
-footer{text-align:center;padding:50px 20px;border-top:1px solid rgba(255,255,255,.1)}
-.small{font-size:12px;color:var(--muted)}
+.note{color:var(--muted);font-size:12px;margin-top:10px;opacity:.8}
+
+footer{text-align:center;padding:40px 18px;border-top:1px solid rgba(255,255,255,.08)}
+.small{font-size:11px;color:var(--muted)}
 
 .sticky{
-position:fixed;
-bottom:0;left:0;right:0;
-display:flex;
-justify-content:space-around;
-background:#111;
+position:fixed;bottom:0;left:0;right:0;
+display:flex;justify-content:space-around;
+background:#0f0e0c;
 padding:10px;
 border-top:1px solid rgba(212,132,26,.2)
 }
-.sticky a{font-size:12px;color:var(--gold)}
+.sticky a{font-size:11px;color:var(--gold)}
 @media(min-width:900px){.sticky{display:none}}
 </style>
 </head>
@@ -108,67 +112,69 @@ border-top:1px solid rgba(212,132,26,.2)
 </header>
 
 <div class="hero">
-<img src="https://images.unsplash.com/photo-1555992336-03a23c7b20ee?auto=format&fit=crop&w=2000&q=60" />
+<img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=2000&q=60" />
 <div class="hero-content">
-<h1>RJ's Sports Bar <br><span>& Grill</span></h1>
-<p>8118 Portage Rd, Portage, MI 49002</p>
-<p>Cold drinks. Hot food. Game day energy.</p>
+<h1>RJ's Sports <br><span>Bar & Grill</span></h1>
+<p>Portage, Michigan</p>
+<p>Cold beer. Big burgers. Loud games.</p>
 <div class="cta">
 <a class="btn primary" href="tel:+12693239262">Call Now</a>
-<a class="btn" href="#menu">View Menu</a>
-<a class="btn" href="https://maps.google.com/?q=8118+Portage+Rd+Portage+MI" target="_blank">Get Directions</a>
+<a class="btn" href="#menu">See Menu</a>
+<a class="btn" href="https://maps.google.com/?q=8118+Portage+Rd+Portage+MI" target="_blank">Directions</a>
 </div>
 </div>
 </div>
 
 <section id="about">
 <div class="title">About RJ's</div>
-<div class="sub">Local sports bar in Portage built around food, drinks, and games.</div>
+<div class="sub">Local bar in Portage built on food, drinks, and game nights</div>
 <p style="color:var(--muted);line-height:1.7">
-RJ's is known for burgers, wings, cold beer, and a game day atmosphere.
+This is a locals spot. Not fancy. Not quiet. TVs on every wall. Burgers, wings, fries, cold beer. You come here to watch the game, eat heavy, and chill out.
 </p>
 </section>
 
 <section id="menu">
-<div class="title">Menu Highlights</div>
-<div class="sub">What people actually order</div>
+<div class="title">What People Order</div>
+<div class="sub">Straight from the bar, no fluff</div>
 
 <div class="grid">
 <div class="card">
 <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1000&q=60" />
 <h3>Burgers</h3>
-<p>Fresh ground beef burgers cooked to order.</p>
+<p>Big, messy, cooked fresh. This is what RJ's is known for.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=1000&q=60" />
 <h3>Wings</h3>
-<p>Classic wings with multiple sauces.</p>
+<p>Classic bar wings with sauces. Game night staple.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1000&q=60" />
-<h3>Starters</h3>
-<p>Fries, onion rings, fried appetizers.</p>
+<h3>Apps</h3>
+<p>Fries, onion rings, fried pickles, cheese balls.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=1000&q=60" />
-<h3>Drinks</h3>
-<p>Beer, cocktails, and bar classics.</p>
+<h3>Beer</h3>
+<p>Cold drafts, bottles, and simple cocktails.</p>
 </div>
 </div>
+
+<div class="note">Replace images with real RJ's photos from Google Maps or Facebook for full realism</div>
 </section>
 
 <section id="contact">
 <div class="title">Contact</div>
-<div class="sub">Call or visit anytime</div>
-<p class="small">Phone: (269) 323-9262</p>
-<p class="small">Address: 8118 Portage Rd, Portage, MI 49002</p>
+<div class="sub">Call or stop in anytime</div>
+<p class="small">(269) 323-9262</p>
+<p class="small">8118 Portage Rd, Portage, MI 49002</p>
 </section>
 
 <footer>
-<div class="small">© RJ's Sports Bar & Grill</div>
+<div class="small">RJ's Sports Bar & Grill</div>
 </footer>
 
 <div class="sticky">
